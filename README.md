@@ -96,7 +96,6 @@ You can customize the build with the following CMake options:
 
 - `src/`: Source files
 - `include/`: Header files
-- `tests/`: Unit tests
 - `CMakeLists.txt`: CMake build configuration
 
 ## Contributing
