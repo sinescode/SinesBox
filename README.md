@@ -215,8 +215,16 @@ infoBox.draw();
 ## Contributing
 Contributions are welcome! Please submit pull requests or open issues on the project repository.
 
-# 🚨 **Attention**
+## 🚨 **Attention**
 
 The background color is **not perfect yet**, so I highly recommend **waiting for the next update** for an improved design.
 
 Stay tuned for updates!
+
+---
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Status-Under%20Development-orange?style=for-the-badge&logo=progress" alt="Development Status">
+  <br>
+  <sub>🔧 Version: Pre-release | 🚧 Improvements Coming Soon</sub>
+</div>
