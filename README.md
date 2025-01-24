@@ -16,7 +16,7 @@ SinesBox is a C++ library designed for [brief description of library purpose]. I
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/SinesBox.git
+https://github.com/sinescode/SinesBox.git
 cd SinesBox
 ```
 
@@ -213,13 +213,13 @@ infoBox.draw();
 ## Contributing
 Contributions are welcome! Please submit pull requests or open issues on the project repository.
 
-<div style="border: 2px solid #ff4d4d; background-color: #ffe6e6; padding: 20px; border-radius: 10px; font-family: Arial, sans-serif; color: #333;">
-  <h2 style="color: #ff0000; text-align: center; font-weight: bold;">🚨 Attention</h2>
-  <p style="font-size: 16px; line-height: 1.6;">
-    The background color is <strong>not perfect yet</strong>, so I highly recommend <strong>waiting for the next update</strong> for an improved design.
-  </p>
-  <p style="text-align: center; font-weight: bold;">Stay tuned for updates!</p>
-</div>
+<h1 style="color: red;">🚨 Attention</h1>
+
+**<span style="color: #ff4d4d;">The background color is not perfect yet</span>**, so I highly recommend **<span style="color: #ff4d4d;">waiting for the next update</span>** for an improved design.
+
+---
+
+### Stay tuned for updates!
 
 ---
 
