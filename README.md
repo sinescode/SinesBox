@@ -122,8 +122,6 @@ SinesBox is a C++ library for creating colorful, customizable text boxes in term
 - Rainbow border mode
 - UTF-8 compatible
 
-## Installation
-
 ### Prerequisites
 - C++ compiler with C++11 support
 - Linux or macOS (uses `sys/ioctl.h` for terminal width detection)
@@ -215,11 +213,13 @@ infoBox.draw();
 ## Contributing
 Contributions are welcome! Please submit pull requests or open issues on the project repository.
 
-## 🚨 **Attention**
-
-The background color is **not perfect yet**, so I highly recommend **waiting for the next update** for an improved design.
-
-Stay tuned for updates!
+<div style="border: 2px solid #ff4d4d; background-color: #ffe6e6; padding: 20px; border-radius: 10px; font-family: Arial, sans-serif; color: #333;">
+  <h2 style="color: #ff0000; text-align: center; font-weight: bold;">🚨 Attention</h2>
+  <p style="font-size: 16px; line-height: 1.6;">
+    The background color is <strong>not perfect yet</strong>, so I highly recommend <strong>waiting for the next update</strong> for an improved design.
+  </p>
+  <p style="text-align: center; font-weight: bold;">Stay tuned for updates!</p>
+</div>
 
 ---
 
