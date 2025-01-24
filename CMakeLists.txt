@@ -9,19 +9,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Define the library sources
 set(SINESBOX_SOURCES
-    SinesBox.cpp
+    src/SinesBox.cpp
 )
 
 set(SINESBOX_HEADERS
-    SinesBox.h
-    SinesGlobalSettings.h
+    include/SinesBox.h
+    include/SinesGlobalSettings.h
 )
 
 # Create the library
 add_library(SinesBox STATIC ${SINESBOX_SOURCES} ${SINESBOX_HEADERS})
 
 # Set the include directory for this target
-target_include_directories(SinesBox PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(SinesBox PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Installation configuration
 install(TARGETS SinesBox
