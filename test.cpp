@@ -18,8 +18,7 @@ void basicExample() {
 void multilineExample() {
     std::cout << "\nMultiline Example:\n";
     SinesBoxLib::SinesBox box;
-    box.setText("This is a longer text that will automatically wrap to multiple lines based on your terminal width. "
-                "It demonstrates how the box adjusts to content length while maintaining proper formatting and alignment.");
+    box.setText("This is a longer text that will automatically wrap to multiple lines based on your terminal width.It demonstrates how the box adjusts to content length while maintaining proper formatting and alignment.This is a longer text that will automatically wrap to multiple lines based on your terminal width.It demonstrates how the box adjusts to content length while maintaining proper formatting and alignment.");
     box.setBorderColor("green");
     box.setTextColor("white");
     box.setBackgroundColor("brightblack");
@@ -30,8 +29,7 @@ void multilineExample() {
 void rainbowExample() {
     std::cout << "\nRainbow Example:\n";
     SinesBoxLib::SinesBox box;
-    box.setText("🌈 Rainbow text with automatic wrapping and colorful borders! "
-                "This example shows how to create eye-catching displays.");
+    box.setText("Rainbow text with automatic wrapping and colorful borders This example shows how to create eye-catching displays.This is a longer text that will automatically wrap to multiple lines based on your terminal width.It demonstrates how the box adjusts to content length while maintaining proper formatting and alignment.This is a longer text that will automatically wrap to multiple lines based on your terminal width.It demonstrates how the box adjusts to content length while maintaining proper formatting and alignment.");
     box.drawRainbow();
 }
 

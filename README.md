@@ -213,15 +213,15 @@ infoBox.draw();
 ## Contributing
 Contributions are welcome! Please submit pull requests or open issues on the project repository.
 
-<h1 style="color: red;">🚨 Attention</h1>
+## ⚠️ Attention
 
-**<span style="color: #ff4d4d;">The background color is not perfect yet</span>**, so I highly recommend **<span style="color: #ff4d4d;">waiting for the next update</span>** for an improved design.
-
----
-
-### Stay tuned for updates!
+***The background color is still not perfect***, so it is recommended to wait for the next update for an improved design.  
+Stay tuned for the updates!
 
 ---
+
+> **Please avoid using emojis unless necessary. Using emojis in Sinesbox may cause disruptions.**
+
 
 <div align="center">
   <img src="https://img.shields.io/badge/Status-Under%20Development-orange?style=for-the-badge&logo=progress" alt="Development Status">
