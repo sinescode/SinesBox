@@ -25,6 +25,8 @@ namespace SinesBoxLib {
         border_color("white"),
         text_color("white"),
         background_color(""),
+        border_background_color(""),
+        text_background_color(""),
         is_border_bold(false),
         is_text_bold(false) {
         
@@ -159,9 +161,16 @@ namespace SinesBoxLib {
         }
     }
 
-    void SinesBox::setBackgroundColor(const std::string& color) {
+
+    void SinesBox::setBorderBackgroundColor(const std::string& color) {
         if (colors.count(color)) {
-            background_color = color;
+            border_background_color = color;
+        }
+    }
+
+    void SinesBox::setTextBackgroundColor(const std::string& color) {
+        if (colors.count(color)) {
+            text_background_color = color;
         }
     }
 
@@ -178,24 +187,24 @@ namespace SinesBoxLib {
         if (text_lines.empty()) return;
 
         // Draw top border
-        std::cout << colorize(corner_tl, border_color, background_color, is_border_bold);
-        std::cout << colorize(repeat(horizontal, terminal_width - 2), border_color, background_color, is_border_bold);
-        std::cout << colorize(corner_tr, border_color, background_color, is_border_bold) << "\n";
+        std::cout << colorize(corner_tl, border_color, border_background_color, is_border_bold);
+        std::cout << colorize(repeat(horizontal, terminal_width - 2), border_color, border_background_color, is_border_bold);
+        std::cout << colorize(corner_tr, border_color, border_background_color, is_border_bold) << "\n";
 
         // Draw text lines with borders
         for (const auto& line : text_lines) {
-            std::cout << colorize(vertical, border_color, background_color, is_border_bold) << " ";
-            std::cout << colorize(line, text_color, background_color, is_text_bold);
+            std::cout << colorize(vertical, border_color, border_background_color, is_border_bold) << " ";
+            std::cout << colorize(line, text_color, text_background_color, is_text_bold);
             
             int padding = terminal_width - line.length() - 4;
-            std::cout << colorize(std::string(padding, ' ') + " ", text_color, background_color);
-            std::cout << colorize(vertical, border_color, background_color, is_border_bold) << "\n";
+            std::cout << colorize(std::string(padding, ' ') + " ", text_color, text_background_color);
+            std::cout << colorize(vertical, border_color, border_background_color, is_border_bold) << "\n";
         }
 
         // Draw bottom border
-        std::cout << colorize(corner_bl, border_color, background_color, is_border_bold);
-        std::cout << colorize(repeat(horizontal, terminal_width - 2), border_color, background_color, is_border_bold);
-        std::cout << colorize(corner_br, border_color, background_color, is_border_bold) << "\n";
+        std::cout << colorize(corner_bl, border_color, border_background_color, is_border_bold);
+        std::cout << colorize(repeat(horizontal, terminal_width - 2), border_color, border_background_color, is_border_bold);
+        std::cout << colorize(corner_br, border_color, border_background_color, is_border_bold) << "\n";
     }
 
     void SinesBox::drawRainbow() {
@@ -207,40 +216,40 @@ namespace SinesBoxLib {
         size_t color_idx = 0;
 
         // Draw top border
-        std::cout << colorize(corner_tl, rainbow_colors[0], background_color, true);
+        std::cout << colorize(corner_tl, rainbow_colors[0], border_background_color, true);
         for (int i = 0; i < terminal_width - 2; i++) {
             std::cout << colorize(horizontal, 
                                 rainbow_colors[(i / 3) % rainbow_colors.size()], 
-                                background_color, true);
+                                border_background_color, true);
         }
         std::cout << colorize(corner_tr, 
                             rainbow_colors[(terminal_width - 2) / 3 % rainbow_colors.size()], 
-                            background_color, true) << "\n";
+                            border_background_color, true) << "\n";
 
         // Draw text lines
         for (size_t i = 0; i < text_lines.size(); i++) {
             const auto& line = text_lines[i];
             color_idx = i % rainbow_colors.size();
             
-            std::cout << colorize(vertical, rainbow_colors[color_idx], background_color, true) << " ";
-            std::cout << colorize(line, rainbow_colors[color_idx], background_color, true);
+            std::cout << colorize(vertical, rainbow_colors[color_idx], border_background_color, true) << " ";
+            std::cout << colorize(line, rainbow_colors[color_idx], text_background_color, true);
             
             int padding = terminal_width - line.length() - 4;
             std::string padding_str(padding + 1, ' ');
-            std::cout << colorize(padding_str, rainbow_colors[color_idx], background_color, true);
-            std::cout << colorize(vertical, rainbow_colors[color_idx], background_color, true) << "\n";
+            std::cout << colorize(padding_str, rainbow_colors[color_idx], text_background_color, true);
+            std::cout << colorize(vertical, rainbow_colors[color_idx], border_background_color, true) << "\n";
         }
 
         // Draw bottom border
         color_idx = text_lines.size() % rainbow_colors.size();
-        std::cout << colorize(corner_bl, rainbow_colors[color_idx], background_color, true);
+        std::cout << colorize(corner_bl, rainbow_colors[color_idx], border_background_color, true);
         for (int i = 0; i < terminal_width - 2; i++) {
             std::cout << colorize(horizontal, 
                                 rainbow_colors[(i / 3 + color_idx) % rainbow_colors.size()], 
-                                background_color, true);
+                                border_background_color, true);
         }
         std::cout << colorize(corner_br, 
                             rainbow_colors[(terminal_width - 2) / 3 + color_idx % rainbow_colors.size()], 
-                            background_color, true) << "\n";
+                            border_background_color, true) << "\n";
     }
 }

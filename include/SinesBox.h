@@ -19,7 +19,8 @@ namespace SinesBoxLib {
         void setText(const std::string& text);
         void setBorderColor(const std::string& color);
         void setTextColor(const std::string& color);
-        void setBackgroundColor(const std::string& color);
+        void setBorderBackgroundColor(const std::string& color);
+        void setTextBackgroundColor(const std::string& color);
         void setBorderBold(bool bold);
         void setTextBold(bool bold);
         void draw();
@@ -37,6 +38,8 @@ namespace SinesBoxLib {
         std::string border_color;
         std::string text_color;
         std::string background_color;
+        std::string border_background_color;
+        std::string text_background_color;
         
         // Style flags
         bool is_border_bold;
